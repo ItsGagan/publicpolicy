@@ -29,9 +29,9 @@ const names = [
   ];
   
 const pdfLinks = [
-    "https://drive.google.com/file/d/1OTs0Mf36UxBFJ1NF4u8VpbbFYhY6dRaL/view?usp=sharing",
-    "https://drive.google.com/file/d/1OTs0Mf36UxBFJ1NF4u8VpbbFYhY6dRaL/view?usp=sharing",
-    "https://drive.google.com/file/d/1OTs0Mf36UxBFJ1NF4u8VpbbFYhY6dRaL/view?usp=sharing",
+    "./lag_sample.pdf",
+    "./lag_sample.pdf",
+    "./lag_sample.pdf",
     // Add more PDF links here
 ];
 
