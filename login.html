@@ -26,6 +26,30 @@
                 <button style="background-color: blue; cursor: pointer;" type="submit">சமர்ப்பிக்க</button>
             </form>
         </section>
+        <br> <br>
+        <section style="display: none;" class="report">
+            <h2>Soil Test Data</h2>
+            <ul>
+                <li>pH: 7.9 - 8.6</li>
+                <li>EC dSm-1: 0.15 - 0.18</li>
+                <li>பகுதி: விண்ணமங்கலம்</li>
+            </ul>
+    
+            <h2>மண் மேலாண்மை பரிந்துரைகள் :</h2>
+            <ol>
+                <li>மண்ணின் கார அமிலத்தன்மையை நிர்வகித்தல்: மண்ணின் கார அமிலத்தன்மையை படிப்படியாக 6.5-7.0 ஆக குறைக்க கந்தக அடிப்படையிலான திருத்தங்களை இட வேண்டும்.</li>
+                <li>அங்ககப் பொருட்களை மேம்படுத்துதல்: உரம், பசுந்தாள் உரம் அல்லது பயிர் எச்சங்கள் போன்ற கரிமப் பொருள் மூலங்களை சேர்க்கவும்.</li>
+                <li>ஊட்டச்சத்து மேலாண்மையை செயல்படுத்துதல்: மண் பரிசோதனை முடிவுகளின் அடிப்படையில் தகுந்த உரங்களை இட வேண்டும். அதிகப்படியான உர பயன்பாட்டை தவிர்க்கவும்.</li>
+                <li>பயிர் சுழற்சி முறை: மண்ணின் தழைச்சத்து அளவை அதிகரிக்க பயறு வகைகள் மற்றும் பயறு வகை அல்லாத பயிர்களுக்கு இடையே மாற்று.</li>
+                <li>இயற்கை பூச்சி மற்றும் நோய் கட்டுப்பாடு: வேப்ப எண்ணெய், பூண்டு அடிப்படையிலான தெளிப்புகள் மற்றும் பயிர் சுழற்சி போன்ற இயற்கை முறைகளைப் பயன்படுத்துங்கள்.</li>
+                <li>மண்ணின் ஈரப்பதத்தைப் பாதுகாத்தல்: ஆவியாதலைக் குறைக்க நீர் சிக்கனமான நீர்ப்பாசனம் மற்றும் மல்ச்சிங் ஆகியவற்றைச் செயல்படுத்தவும்.</li>
+                <li>மண் வளத்தை தவறாமல் கண்காணித்தல்: மண்ணின் கார அமிலத்தன்மை, ஊட்டச்சத்து அளவு மற்றும் கரிம பொருட்களின் உள்ளடக்கம் ஆகியவற்றைக் கண்காணிக்க வழக்கமான மண் பரிசோதனையை மேற்கொள்ளுங்கள்.</li>
+            </ol>
+            <br>
+            <h3>பயிர் பரிந்துரைகள் :</h3>
+            <img style="margin-left: 10vw;" src="./images/crop.jpg" alt="croprecomm">
+            <div style="min-height: 50vh;"></div>
+        </section>
     </main>
     
     <footer>
@@ -58,9 +82,14 @@
     
             // Generate PDF report here
             const reportUrl = `./reports/${surveyNumber}.pdf`;
+
     
             // Show pop-up and load PDF
             alert('Report Generated');
+
+            // Display soil test data and recommendations after generating report
+            const reportSection = document.querySelector('.report');
+            reportSection.style.display = 'block';
             window.open(reportUrl, '_blank');
         });
     </script>
