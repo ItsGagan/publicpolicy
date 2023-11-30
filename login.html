@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Fertile Enough - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/soil.jpeg" alt="Soil Fertile Enough Logo">
+        <h1>மண் வள பரிசோதனை</h1>
+    </header>
+
+    <main>
+        <hr> <br>
+        <section class="login">
+            <h2>அறிக்கைகளைப் பெற உள்நுழைக :</h2>
+            <form action="#">
+                <label for="surveyNumber">அறிக்கை எண்:</label>
+                <input type="text" id="surveyNumber" name="surveyNumber" required>
+    
+                <label for="password">அடையாளச் சொல்:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <button style="background-color: blue; cursor: pointer;" type="submit">சமர்ப்பிக்க</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <hr>
+        <p>&copy; 2023 IS Soil Fertile Enough?</p>
+        <p>A Project based course done for <b>OEM015</b> "Public Policy", at <b>Sastra Deemed University, Thanjavur (613401)</b><br>
+        Under the guidance of<b>: Respected Dr.Selvabaskar S sir</b></p>
+    </footer>
+    
+    <script>
+        const form = document.querySelector('form');
+    
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+    
+            const surveyNumber = event.target.elements.surveyNumber.value;
+            const password = event.target.elements.password.value;
+    
+            if (surveyNumber < 261 || surveyNumber > 275) {
+                alert('Dtails Not found');
+                return;
+            }
+    
+            const expectedPassword = `${surveyNumber}@sastra`;
+    
+            if (password !== expectedPassword) {
+                alert('Invalid Password');
+                return;
+            }
+    
+            // Generate PDF report here
+            const reportUrl = `./reports/${surveyNumber}.pdf`;
+    
+            // Show pop-up and load PDF
+            alert('Report Generated');
+            window.open(reportUrl, '_blank');
+        });
+    </script>
+    </body>
+    </html>
+    

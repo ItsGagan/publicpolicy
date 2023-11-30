@@ -1,71 +1,98 @@
-/* style.css */
+/* Style.css */
+
+* {
+    background-color: azure;
+}
 
 body {
+    min-height: 120vh;
     font-family: sans-serif;
-    background-color: #f2f2f2;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-}
-
-.search-container {
+header {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-#searchTerm {
-    padding: 5px;
-    border: 1px solid #ccc;
-    width: 200px;
-}
-
-#findButton {
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-}
-
-#result {
-    margin: 20px;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #f0f0f0; */
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
 }
 
-#pdf-viewer {
-    display: none;
-    width: 100%;
-    height: 500px;
-    border: 1px solid #ccc;
-    padding: 10px;
+header img {
+    width: 70px;
+    height: auto; 
 }
 
-#download-link {
-    margin-top: 10px;
-    text-align: center;
+img {
+    width: 300px;
+    height: auto;
 }
 
-#download-link a {
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
+    border-radius: 5px;
 }
+
+
+.image-right {
+    display: flex;
+    align-items: center;
+}
+
+.image-left {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.team {
+    text-align: center;
+}
+
+.team li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team li img {
+    /* width: 50px; Adjust the width as needed */
+    height: auto;
+    border-radius: 50%; /* Add a rounded border for a circular image */
+    margin-right: 10px;
+}
+
+.team li p {
+    margin: 0;
+    font-weight: bold;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    border: 1px solid;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* background-color: #f0f0f0; */
+    padding: 20px;
+    text-align: center;
+}
+
